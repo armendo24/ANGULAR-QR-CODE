@@ -3,6 +3,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Observable, ReplaySubject } from 'rxjs';
 import * as htmlToImage from 'html-to-image';
 import * as FileSaver from 'file-saver';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -11,7 +12,7 @@ import * as FileSaver from 'file-saver';
 export class AppComponent implements OnInit {
   url: string = '';
 
-  FileLogoQrCode: string = '../assets/logo.svg';
+  FileLogoQrCode: string = 'assets/logo.png';
   QrCodeSize = {
     disabled: false,
     max: 1500,
