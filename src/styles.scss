@@ -1,0 +1,149 @@
+@use '@angular/material' as mat;
+@include mat.core();
+@import 'bootstrap/scss/bootstrap';
+@import 'ngx-toastr/toastr-bs5-alert';
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+$primary-color: mat.get-color-from-palette(mat.$teal-palette, 700);
+$primary-text: white;
+
+$accent-color: mat.get-color-from-palette(mat.$yellow-palette, 500);
+$accent-text: white;
+
+$warn-color: mat.get-color-from-palette(mat.$red-palette, 900);
+$warn-text: white;
+
+$t-primary: mat.define-palette(mat.$teal-palette, 700);
+$t-accent: mat.define-palette(mat.$yellow-palette, 500);
+
+// The warn palette is optional (defaults to red).
+$t-warn: mat.define-palette(mat.$red-palette, 900);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$t-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $t-primary,
+      accent: $t-accent,
+      warn: $t-warn,
+    ),
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($t-theme);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
+html,
+body {
+  height: 100%;
+  font-family: 'Noto Sans Thai', sans-serif !important;
+  margin: 0;
+  // line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+button:focus {
+  outline: none !important;
+}
+.mat-icon-button ::ng-deep .mat-button-focus-overlay {
+  display: none;
+}
+*:focus,
+*:active {
+  outline: none !important;
+}
+* {
+  font-family: 'Noto Sans Thai', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+.mat-body,
+.mat-body-1,
+.mat-typography {
+  font-family: 'Noto Sans Thai', sans-serif !important;
+}
+
+.curser-pointer {
+  cursor: pointer !important;
+}
+
+.bt-edit {
+  background-color: #ffde00 !important;
+  color: white !important;
+}
+
+.bt-delete {
+  background-color: #dd5353 !important;
+  color: white !important;
+}
+
+.primary-color {
+  color: $primary-color !important;
+  // color: white !important;
+}
+
+.primary-bg {
+  background-color: $primary-color !important;
+  // color: $primary-text;
+}
+
+.primary-border {
+  border: 1px solid $primary-color;
+}
+
+.accent-color {
+  color: $accent-color !important;
+  // color: white !important;
+}
+
+.accent-bg {
+  background-color: $accent-color !important;
+  color: $accent-text;
+}
+
+.accent-border {
+  border: 1px solid $accent-color;
+}
+
+.warn-color {
+  color: $warn-color !important;
+  // color: white !important;
+}
+
+.warn-bg {
+  background-color: $warn-color !important;
+  color: $warn-text;
+}
+
+.warn-border {
+  border: 1px solid $warn-color;
+}
+
+.white-color {
+  color: white !important;
+}
+
+.white-bg {
+  background-color: white !important;
+}
+
+.black-color {
+  color: black !important;
+}
+
+.black-bg {
+  background-color: black !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
