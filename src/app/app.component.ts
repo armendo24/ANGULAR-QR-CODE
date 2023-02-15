@@ -11,7 +11,7 @@ import * as FileSaver from 'file-saver';
 export class AppComponent implements OnInit {
   url: string = '';
 
-  FileLogoQrCode: string = '';
+  FileLogoQrCode: string = '../assets/logo.svg';
   QrCodeSize = {
     disabled: false,
     max: 1500,
